@@ -1404,8 +1404,8 @@ using SafeMath for uint;
      * @dev Converts a `uint256` to its ASCII `string` hexadecimal representation with fixed length.
      */
     function toHexString(uint256 value, uint256 length) internal pure returns (string memory) {
-        uint amountA = length+2;
-        bytes memory buffer = new bytes(amountA.mul(2));
+        //uint amountA = length+2;
+        bytes memory buffer = new bytes(mul(length+2,2));
         buffer[0] = "0";
         buffer[1] = "x";
         uint amountB = length+1;
