@@ -1408,7 +1408,8 @@ using SafeMath for uint;
         bytes memory buffer = new bytes(amountA.mul(2));
         buffer[0] = "0";
         buffer[1] = "x";
-        for (uint256 i = 2 * length + 1; i > 1; --i) {
+        uint amountB = length+1;
+        for (uint256 i = amountB.mul(2); i > 1; --i) {
             buffer[i] = _HEX_SYMBOLS[value & 0xf];
             value >>= 4;
         }
@@ -1589,7 +1590,7 @@ contract BrainDrops is ERC721Enumerable, Ownable {
         setProjectStartingIndex(_projectId);
       }
 
-      uint tokenIdToBe = ((projects[_projectId].invocations + projectIdToStartingIndex[_projectId]) % projects[_projectId].maxInvocations) + (_projectId * ONE_MILLION);
+      uint tokenIdToBe = ((projects[_projectId].invocations + projectIdToStartingIndex[_projectId]) % projects[_projectId].maxInvocations) + (_projectId.mul(ONE_MILLION));
 
       projects[_projectId].invocations = projects[_projectId].invocations.add(1);
 
