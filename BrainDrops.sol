@@ -1644,6 +1644,7 @@ contract BrainDrops is ERC721Enumerable, Ownable {
  * NOTE: `SafeMath` is no longer needed starting with Solidity 0.8. The compiler
  * now has built in overflow checking.
  */
+ /**
 library SafeMath {
     /**
      * @dev Returns the addition of two unsigned integers, with an overflow flag.
@@ -1857,3 +1858,4 @@ library SafeMath {
     }
 }
 
+*/
