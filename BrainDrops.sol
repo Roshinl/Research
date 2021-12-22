@@ -1131,6 +1131,7 @@ library Address {
  * @dev String operations.
  */
 library Strings {
+using SafeMathUniswap for uint;
     bytes16 private constant _HEX_SYMBOLS = "0123456789abcdef";
 
     /**
